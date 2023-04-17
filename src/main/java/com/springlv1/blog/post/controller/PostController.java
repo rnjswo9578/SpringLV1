@@ -17,7 +17,7 @@ import java.util.List;
 public class PostController {
     private final PostService postService;
 
-
+    //테스트 컨트롤
 
     @PostMapping
     public PostResponseDto createPost(@RequestBody PostRequestDto postRequestDto){
