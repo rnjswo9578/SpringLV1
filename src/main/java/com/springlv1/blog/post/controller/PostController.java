@@ -4,6 +4,8 @@ import com.springlv1.blog.post.dto.IsSuccessDto;
 import com.springlv1.blog.post.dto.PostRequestDto;
 import com.springlv1.blog.post.dto.PostResponseDto;
 import com.springlv1.blog.post.service.PostService;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,13 +13,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/post")
+@RequiredArgsConstructor
 public class PostController {
     private final PostService postService;
 
-    @Autowired
-    public PostController(PostService postService) {
-        this.postService = postService;
-    }
+
 
     @PostMapping
     public PostResponseDto createPost(@RequestBody PostRequestDto postRequestDto){
