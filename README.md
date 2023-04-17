@@ -1,9 +1,7 @@
 # SpringLV1
 First Spring Poject!1
 | Method | URL | Request | Response |
-
 | --- | --- | --- | --- |
-
 | GET | /api/posts | - | {
 {
 "createdAt": "2022-07-25T12:43:01.226062”,
