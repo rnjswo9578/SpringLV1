@@ -5,6 +5,7 @@ import com.springlv1.blog.post.dto.PostRequestDto;
 import com.springlv1.blog.post.dto.PostResponseDto;
 import com.springlv1.blog.post.entity.Post;
 import com.springlv1.blog.post.repository.PostRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,14 +14,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class PostServiceImpl implements PostService{
 
     private final PostRepository postRepository;
-
-    @Autowired
-    public PostServiceImpl(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
 
     @Override
     public PostResponseDto createPost(PostRequestDto postRequestDto) {
